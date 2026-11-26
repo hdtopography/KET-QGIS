@@ -71,6 +71,14 @@ def _never_cancel():
     return False
 
 
+def _traditional_axis_order(srs):
+    """GDAL >= 3 only; older GDAL (2.x) has no axis-mapping API and needs nothing."""
+    try:
+        srs.SetAxisMappingStrategy(osr.OAMS_TRADITIONAL_GIS_ORDER)
+    except (AttributeError, TypeError):
+        pass
+
+
 def read_dem(path, log=_noop_log):
     """Open a DEM. If it is in a geographic CRS (lat/lon, e.g. GSI 基盤地図 DEM),
     it is reprojected on the fly to the matching UTM zone so that distances are
@@ -84,7 +92,7 @@ def read_dem(path, log=_noop_log):
         raise KETError("The DEM has no coordinate reference system. "
                        "Assign one (projected, in metres) and try again.")
     srs.ImportFromWkt(wkt)
-    srs.SetAxisMappingStrategy(osr.OAMS_TRADITIONAL_GIS_ORDER)
+    _traditional_axis_order(srs)
 
     if srs.IsGeographic():
         gt = ds.GetGeoTransform()
@@ -105,6 +113,7 @@ def read_dem(path, log=_noop_log):
                            "projected CRS (metres) yourself and try again.")
         srs = osr.SpatialReference()
         srs.ImportFromEPSG(epsg)
+        _traditional_axis_order(srs)
     elif srs.GetLinearUnits() <= 0 or abs(srs.GetLinearUnits() - 1.0) > 1e-6:
         log("Warning: CRS linear unit is not metre (factor %.4f). Distances and "
             "areas are reported in CRS units x factor." % srs.GetLinearUnits())
