@@ -149,7 +149,7 @@ python tests/test_ket.py
 ## References
 
 - Hayakawa, Y.S., Oguchi, T. (2006) DEM-based identification of fluvial knickzones and its application to Japanese mountain rivers. *Geomorphology* 78, 90–106. https://doi.org/10.1016/j.geomorph.2006.01.018
-- Hayakawa, Y.S., Oguchi, T. (2009) GIS analysis of fluvial knickzones distribution in Japanese mountain watersheds. *Geomorphology* 111, 27–37. https://doi.org/10.1016/j.geomorph.2007.11.016
+- Hayakawa, Y.S., Oguchi, T. (2009) GIS analysis of fluvial knickzone distribution in Japanese mountain watersheds. *Geomorphology* 111, 27–37. https://doi.org/10.1016/j.geomorph.2007.11.016
 - Zahra, T., Paudel, U., Hayakawa, Y.S., Oguchi, T. (2017) Knickzone Extraction Tool (KET) – A new ArcGIS toolset for automatic extraction of knickzones from a DEM based on multi-scale stream gradients. *Open Geosciences* 9, 73–88. https://doi.org/10.1515/geo-2017-0006
 - Barnes, R., Lehman, C., Mulla, D. (2014) Priority-flood: An optimal depression-filling and watershed-labeling algorithm for digital elevation models. *Computers & Geosciences* 62, 117–127.
 
