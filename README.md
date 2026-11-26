@@ -25,7 +25,10 @@ with numpy + GDAL only, runs inside QGIS or from the command line, and adds the 
 
 ## 使い方 / Quick start
 
-### QGIS で（3.22 以降）
+**動作確認済み / Tested:** QGIS 3.4.8（GDAL 2.4.1, Python 3.6, macOS）、およびコマンドラインで Python 3.12 + GDAL 3.8。
+それ以外のバージョンでも動くはずですが確認はしていません（不具合は Issue へ）。
+
+### QGIS で（3.x）
 
 1. プロセシングツールボックス上部の Python アイコン ▶ **「スクリプトをツールボックスに追加…」** で
    `ket_qgis.py` を選ぶ（初回のみ）。
@@ -146,7 +149,7 @@ python tests/test_ket.py
 ## References
 
 - Hayakawa, Y.S., Oguchi, T. (2006) DEM-based identification of fluvial knickzones and its application to Japanese mountain rivers. *Geomorphology* 78, 90–106. https://doi.org/10.1016/j.geomorph.2006.01.018
-- Hayakawa, Y.S., Oguchi, T. (2009) GIS analysis of fluvial knickzone distribution in Japanese mountain watersheds. *Geomorphology* 111, 27–37. https://doi.org/10.1016/j.geomorph.2007.11.016
+- Hayakawa, Y.S., Oguchi, T. (2009) GIS analysis of fluvial knickzones distribution in Japanese mountain watersheds. *Geomorphology* 111, 27–37. https://doi.org/10.1016/j.geomorph.2007.11.016
 - Zahra, T., Paudel, U., Hayakawa, Y.S., Oguchi, T. (2017) Knickzone Extraction Tool (KET) – A new ArcGIS toolset for automatic extraction of knickzones from a DEM based on multi-scale stream gradients. *Open Geosciences* 9, 73–88. https://doi.org/10.1515/geo-2017-0006
 - Barnes, R., Lehman, C., Mulla, D. (2014) Priority-flood: An optimal depression-filling and watershed-labeling algorithm for digital elevation models. *Computers & Geosciences* 62, 117–127.
 
