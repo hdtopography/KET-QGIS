@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it together with Hayakawa & Oguchi (2006) and Zahra et al. (2017)."
+title: "KET-QGIS: Knickzone Extraction Tool v2"
+version: 2.0.0
+license: MIT
+repository-code: "https://github.com/hdtopography/KET-QGIS"
+authors:
+  - family-names: Hayakawa
+    given-names: Yuichi S.
+    affiliation: Hokkaido University
+preferred-citation:
+  type: article
+  title: "Knickzone Extraction Tool (KET) - A new ArcGIS toolset for automatic extraction of knickzones from a DEM based on multi-scale stream gradients"
+  authors:
+    - family-names: Zahra
+      given-names: Tuba
+    - family-names: Paudel
+      given-names: Uttam
+    - family-names: Hayakawa
+      given-names: Yuichi S.
+    - family-names: Oguchi
+      given-names: Takashi
+  journal: "Open Geosciences"
+  volume: 9
+  start: 73
+  end: 88
+  year: 2017
+  doi: "10.1515/geo-2017-0006"
