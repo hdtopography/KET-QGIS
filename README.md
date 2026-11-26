@@ -12,6 +12,10 @@ A single-file tool that extracts fluvial knickzones from a DEM. It re-implements
 with numpy + GDAL only, runs inside QGIS or from the command line, and adds the original two-sided
 (upstream + downstream) gradient measurement of Hayakawa & Oguchi (2006, 2009).
 
+![Plan view of extracted knickzones on hillshade](fig_plan_view.png)
+
+*合成 DEM（5 m、10 × 10 km）に既定設定で適用した結果。背景は地形陰影図、青線は河道（≥ 0.1 km²）、赤が遷急区間。右は両側探索（赤）と下流のみ（黄）の比較。 / Default-settings result on a synthetic 5-m DEM over hillshade; right: two-sided (red) vs downstream-only (yellow).*
+
 ![Rd along a synthetic river](fig_profile_both_vs_down.png)
 
 *合成 DEM（x = 2000–2300 m に 60 m の段差）での Rd。両側探索（赤）は段差の位置にピークが来るのに対し、
@@ -145,3 +149,11 @@ python tests/test_ket.py
 - Hayakawa, Y.S., Oguchi, T. (2009) GIS analysis of fluvial knickzone distribution in Japanese mountain watersheds. *Geomorphology* 111, 27–37. https://doi.org/10.1016/j.geomorph.2007.11.016
 - Zahra, T., Paudel, U., Hayakawa, Y.S., Oguchi, T. (2017) Knickzone Extraction Tool (KET) – A new ArcGIS toolset for automatic extraction of knickzones from a DEM based on multi-scale stream gradients. *Open Geosciences* 9, 73–88. https://doi.org/10.1515/geo-2017-0006
 - Barnes, R., Lehman, C., Mulla, D. (2014) Priority-flood: An optimal depression-filling and watershed-labeling algorithm for digital elevation models. *Computers & Geosciences* 62, 117–127.
+
+---
+
+## ライセンス・引用 / License and citation
+
+MIT License © 2026 Yuichi S. Hayakawa（[LICENSE](LICENSE)）。自由に使用・改変・再配布できます。論文等で使う場合は、上記 References の Hayakawa & Oguchi (2006)・Zahra et al. (2017) の引用をお願いします（[CITATION.cff](CITATION.cff)）。
+
+Released under the MIT License. If you use this tool in a publication, please cite Hayakawa & Oguchi (2006) and Zahra et al. (2017).
